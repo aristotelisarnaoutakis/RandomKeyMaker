@@ -27,7 +27,9 @@ A web-based password generator that allows users to create secure and customizab
 
 ## Usage
 
-1. Launch the application by opening `index.html` in your browser.
+1. Launch the application:
+   - Open index.html in your browser, or
+   - Visit the live demo at [RandomKeyMaker](https://aristotelisarnaoutakis.github.io/RandomKeyMaker/).
 2. Customize the password settings:
    - Set the password length.
    - Choose the character types (uppercase, lowercase, numbers, special characters).
