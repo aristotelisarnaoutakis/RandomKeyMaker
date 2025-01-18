@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Generate secure and random passwords instantly with our easy-to-use password generator tool.">
+    <meta name="keywords" content="random password generator, secure password generator, online password tool, generate strong passwords">
+    <meta name="robots" content="index, follow">
+    <title>Generate a Random Password - RandomKeyMaker</title>
+    <link rel="shortcut icon" href="./assets/images/favicon.png" type="image/x-icon">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+    
+    <audio id="shakeSound" src="./assets/sounds/shake.wav" preload="auto"></audio>
+    <audio id="generateSound" src="./assets/sounds/generate.wav" preload="auto"></audio>
+    <audio id="copySound" src="./assets/sounds/copy.wav" preload="auto"></audio>
+
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+
+        <div class="logo" onclick="reloadPage()">
+            <img src="./assets/images/logo.png" alt="Logo of Random Password Generator - RandomKeyMaker">
+            <h2 onclick="reloadPage()">RandomKeyMaker</h2>
+        </div>
+
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main class="content">
+
+        <div class="container">
+
+            <div class="title">
+                <h1>Generate a Random <span class="span">Password</span></h1>
+            </div>
+
+            <div class="box-of-password">
+                <input class="input-box" type="text" placeholder="Password" id="password">
+                <button onclick="copyPassword()"> Copy </button>
+            </div>
+
+            <div class="slider">
+                <label for="password-length">Password Length:<span id="length-display">4</span></label>
+                <input class="password-length" id="password-length" type="range" min="4" max="50" value="4">
+            </div>
+
+            <div class="options">
+                <label class="characters">Characters:</label>
+                <input type="checkbox" id="uppercase">
+                <label for="uppercase">UpperCase</label>
+                <input type="checkbox" id="Lowercase">
+                <label for="Lowercase">LowerCase</label>
+                <input type="checkbox" id="Numbers">
+                <label for="Numbers">Numbers</label>
+                <input type="checkbox" id="Symbols">
+                <label for="Symbols">Symbols</label>
+            </div>
+
+            <div class="generate">
+                 <button onclick="createPassword()">Generate Password</button>
+            </div>
+
+        </div>
+
+    </main>
+
+    <!-- TIPS SECTION -->
+    <div class="tips-section">
+
+        <div class="title-tips-section">
+            <h2>What makes a password strong?</h2>
+        </div>
+
+        <div class="undercontainer">
+
+            <div class="size-of-photos-tips-section">
+                <div class="pic-tips-section">
+                    <img src="./assets/images/encryption--lock.png" alt="Encryption lock icon symbolizing secure password protection">
+                </div>
+                <div class="title-of-photos-tips-section">Complex</div>
+                <div class="text-tips-section">
+                    Strong passwords use a combination of letters, numbers, cases, and symbols to form an unpredictable string of characters that doesn't resemble words or names.
+                </div>
+            </div>
+
+            <div class="size-of-photos-tips-section">
+                <div class="pic-tips-section">
+                    <img src="./assets/images/encryption--finger.png" alt="Fingerprint icon representing biometric encryption security">
+                </div>
+                <div class="title-of-photos-tips-section">Unique</div>
+                <div class="text-tips-section">
+                    A strong password should be unique to each account to reduce vulnerability in the event of a hack.
+                </div>
+            </div>
+
+            <div class="size-of-photos-tips-section">
+                <div class="pic-tips-section">
+                    <img src="./assets/images/encryption--key.png" alt="Encryption key symbol representing secure password generation">
+                </div>
+                <div class="title-of-photos-tips-section">Long</div>
+                <div class="text-tips-section">
+                    The longer a password, the more secure it is. A strong password should be at least 10 characters long.
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- FAQs -->
+    <div class="faq">
+
+        <h1 class="faq-h1">RandomKeyMaker FAQs</h1>
+        <h2 class="faq-h2">Questions? Answers below!</h2>
+
+        <div class="faq-item">
+            <button class="faq-question" onclick="toggleAnswer(1)">Is the RandomKeyMaker safe to use?</button>
+            <div class="faqans" id="answer-1">
+                <p> 
+                    Absolutely! RandomKeyMaker Password Generator uses mathematical entropy to create a random password consisting of numbers, letters, and symbols. The characters rendered from this auto password generator are entirely random and won't transmit over the internet, providing the most secure password during the password generator process. No one, not even RandomKeyMaker, can see your private, personal password.
+                </p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question" onclick="toggleAnswer(2)">Why should I use a password generator?</button>
+            <div class="faqans" id="answer-2">
+                <p> 
+                Computers can quickly guess passwords, with hackers testing billions of combinations in seconds. Our free online password generator uses an algorithm based on mathematical randomness to create secure, random passwords. Many people use predictable passwords, which are easily guessed by computers. Using a combination of alphanumeric characters and special symbols ensures stronger security.
+                </p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question" onclick="toggleAnswer(3)">Do I need a unique password for every account?</button>
+            <div class="faqans" id="answer-3">
+                <p> 
+                Yes, it is crucial to have a unique password for every online account you might have. Once passwords get saved due to a security breach, the hackers often keep them in a leaked password database. Protect yourself from having your personal information exposed on the dark web by using the RandomKeyMaker. It will create random passwords for you to use for each account to never have to recycle your passwords again.
+                </p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question" onclick="toggleAnswer(4)">What are the requirements for a strong password?</button>
+            <div class="faqans" id="answer-4">
+                <p> 
+                To create a strong password, you need random passwords generated by cryptographic entropy, but human-generated passwords are weak due to predictable typing patterns. Even the cleverest passwords can be cracked by hackers testing billions of combinations. A strong random password is crucial for securing important accounts, but humans can’t generate one using a keyboard. Only mathematical entropy can provide the randomness needed to avoid a breach.
+                </p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question" onclick="toggleAnswer(5)">What makes a password safe?</button>
+            <div class="faqans" id="answer-5">
+                <p> 
+                Creating strong, unique passwords for multiple sites can be challenging, leading many to use the same password across sites, which is unsafe. If hacked, your information is at risk. The secure password generator creates 16+ character passwords with numbers, symbols, and uppercase letters. Never save them in web browsers. Always use a mix of uppercase and lowercase letters. In today’s digital world, unique passwords are essential to protect sensitive information. RandomKeyMaker’s password generator creates unbreakable passwords, offering customization and generating them locally without storing them on a server.
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+
+        <div class="footer-box">
+            <div class="logo-footer" onclick="reloadPage()">
+                <img src="./assets/images/logo-footer.png" alt="Logo of Random Password Generator - RandomKeyMaker">
+                <h2 onclick="reloadPage()">RandomKeyMaker</h2>
+            </div>
+            <a href="https://github.com/aristotelisarnaoutakis" target="_blank" class="link-text">GitHub</a>
+        </div>
+
+        <HR></HR>
+
+        <div class="text-footer">
+            <p>© 2025 Developed By Aristotelis Arnaoutakis.<br>All rights reserved.</p>
+        </div>
+
+    </footer>
+
+</body>
+
+<script src="index.js" defer></script>
+
+</html>

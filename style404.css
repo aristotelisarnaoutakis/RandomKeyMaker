@@ -1,0 +1,220 @@
+/* BODY */
+body {
+    background: #eb5e28;
+    color: #FFFCF2;
+    min-width: auto;
+    width: auto;
+    height: auto; 
+    margin: 0px;
+}
+  
+  /* TEXT SELECTION COLOR */
+  ::selection {
+    background: #eb5e28;
+    color: #FFFCF2;
+  }
+
+  h1 .span::selection {
+    background-color: #FFFCF2;
+    color: #eb5e28;
+  }
+
+  ::selection {
+    background: #eb5e28;
+    color: #FFFCF2;
+  }
+  
+  /* HEADER */
+  header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    padding-left: 10px;
+    height: 100px;
+    width: auto;
+    background-color: #eb5e28;
+    color: #252422;
+    border-radius: 10px;
+  }
+  
+  .logo {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 20px;
+  }
+  
+  .logo img {
+    height: 50px;
+    margin-right: 10px;
+  }
+
+/* MAIN CONTENT */
+.content{
+    background-color: #252422;
+    height: 970px;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    transition: 0.8s;
+  }
+
+  @media (max-width: 500px) {
+    .content{
+        background-color: #252422;
+        height: 650px;
+        width: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        align-content: center;
+        transition: 0.8s;
+      }
+    }
+  
+  .container {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+  }
+  
+  .title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+    font-family: "Orbitron", serif;
+    color: #FFFCF2;
+    margin-left: auto;
+    margin-right: auto;
+    height: auto;
+    width: 90%;
+    font-size: large;
+    text-align: center;
+    margin-bottom: 0;
+    margin-top: 10px;
+    max-width: 90%;
+  }
+
+  h1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+    margin-top: 10px;
+    max-width: 90%;
+
+  }
+  
+  .span {
+    color: #eb5e28;
+    font-size: 95px;
+    font-weight: 420;
+    margin-bottom: 0px;
+  }
+
+button {
+    margin-top: 10px;
+    font-family: "Orbitron", serif;
+    font-weight: 430;
+    color: #eb5e28;
+    font-size: 30px;
+    background-color: #FFFCF2;
+    border: 0px;
+    box-shadow: 0px 0px 0px 3px #eb5e28;
+    border-radius: 5px;
+    width: 200px;
+    height: 60px;
+    transition: 0.8s;
+    cursor: pointer;
+}
+
+button:hover {
+    transition: 0.8s;
+    color: #FFFCF2;
+    background: #eb5e28;
+    box-shadow: 0px 0px 0px 3px #FFFCF2;
+}
+
+  /* FOOTER */
+footer {
+    margin-top: 0px;
+    padding: 10px;
+    width: auto;
+    height: 100px;
+    max-width: auto;
+    background-color: #eb5e28;
+    color: #252422;
+    font-family: 'Orbitron', sans-serif;
+    border-radius: 0;
+  }
+  
+  .logo-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    color: #FFFCF2;
+    font-size: 15px;
+  }
+  
+  .logo-footer img {
+    height: 40px;
+    margin-right: 10px;
+  }
+  
+  .text-footer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  
+  .footer-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  footer a.link-text {
+    transition: 0.5s;
+    color: #FFFCF2;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 25px;
+    margin-bottom: 10px;
+  
+  }
+  
+  footer a.link-text:hover {
+    color: #252422;
+    transition: 0.5s;
+  }
+  
+  footer p {
+    text-align: center;
+    width: auto;
+    color: #FFFCF2;
+    font-size: 15px;
+    font-weight: 400;
+    margin: 0;
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+  
+  hr {
+    border:1px solid #FFFCF2;
+    border-radius: 0px;
+    width: 99%;
+  }
+  
